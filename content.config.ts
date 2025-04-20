@@ -1,7 +1,7 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 const skills = defineCollection({
     type: "data",
-    source: 'skills.yml',
+    source: 'data/skills.yml',
     schema: z.object({
         items: z.array(z.object({
             category: z.string(),
@@ -14,7 +14,7 @@ const skills = defineCollection({
 
 const experience = defineCollection({
     type: 'data',
-    source: 'experience.yml',
+    source: 'data/experience.yml',
     schema: z.object({
         items: z.array(z.object({
             title: z.string(),
