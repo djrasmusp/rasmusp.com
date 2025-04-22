@@ -28,8 +28,23 @@ const experience = defineCollection({
     )
 })
 
+const content = defineCollection({
+    type: 'page',
+    source: {
+        include: '**',
+        exclude: [
+            'data/**',
+            'pages/**',
+        ],
+    },
+    schema: z.object({
+        date: z.date(),
+        rawbody: z.string(),
+    }),
+})
+
 const collections = {
-    skills, experience
+    content, skills, experience
 }
 
 export default defineContentConfig({ collections })
