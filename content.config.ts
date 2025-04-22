@@ -30,7 +30,7 @@ const content = defineCollection({
         include: '**',
         exclude: [
             'data/**',
-            'pages/**',
+            'pages/**', 'Skills/**',
         ],
     },
     schema: z.object({
