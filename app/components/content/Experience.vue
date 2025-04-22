@@ -12,8 +12,11 @@ function getYear(date: Date | null | undefined){
 
 <template>
 <div>
-  <div v-for="item in data ">
+  <h2>Experience</h2>
+  <ul>
+  <li v-for="item in data ">
     <span>{{ getYear(item.startDate)}} - {{ getYear(item.endDate) }} <strong>{{ item.title}}, {{ item.company }} - {{ item.location}}</strong></span>
-  </div>
+  </li>
+  </ul>
 </div>
 </template>
