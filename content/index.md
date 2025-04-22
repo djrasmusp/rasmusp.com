@@ -5,5 +5,5 @@ description: The best in the world
 
 # Rasmus
 
-::Skills
+::skills
 ::
