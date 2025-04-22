@@ -1,18 +1,13 @@
 <script setup lang="ts">
-  defineProps<{
-    categories: [{
-      category: string,
-      items: [{ title: string}]
-    }]
-  }>()
+const { data} = await useAsyncData('skills', () => {
+  return queryCollection('skills').all()
+})
 </script>
 
 <template>
-  <div v-for="(category, index) in categories" :key="index">
-    <h2>{{ category.category }}</h2>
-    <div v-for="(item, index) in category.items" :key="index">
-      {{ item.title }}
-    </div>
-
+<div>
+  <div v-for="(category, index) in data" :key="category.id">
+    <pre>{{ category.items }}</pre>
   </div>
+</div>
 </template>
