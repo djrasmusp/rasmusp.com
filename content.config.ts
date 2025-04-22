@@ -16,7 +16,7 @@ const experience = defineCollection({
             company: z.string().optional(),
             location: z.string().optional(),
             startDate: z.date(),
-            endDate: z.union([z.date(), z.string()]),
+            endDate: z.date().optional(),
             description: z.string().optional(),
             }
         )
