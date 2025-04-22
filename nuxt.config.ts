@@ -1,7 +1,19 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  modules: ['@nuxt/content', '@nuxt/icon'],
+  modules: ['@nuxt/fonts', '@nuxt/content', '@nuxt/icon'],
+  css: ['~/assets/css/main.css'],
+  fonts: {
+    families: [
+      { name: 'Roboto Mono', provider: 'google'  },
+    ],
+    defaults: {
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+    },
+    provider: 'google',
+  },
   icon: {
     size: '8rem',
     mode: 'svg',
@@ -21,8 +33,11 @@ export default defineNuxtConfig({
       }
     }
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   future: {
     compatibilityVersion: 4
+  },
+  vite: {
+    plugins: [tailwindcss()]
   }
 })
