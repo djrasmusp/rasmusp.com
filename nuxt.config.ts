@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  modules: ['@nuxt/fonts', '@nuxt/content', '@nuxt/icon'],
+  modules: ['@nuxt/fonts', '@nuxt/content', '@nuxt/icon', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
   fonts: {
     families: [
