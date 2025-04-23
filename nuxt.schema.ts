@@ -110,7 +110,13 @@ export default defineNuxtSchema({
           description:
             'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
           icon: 'i-mdi-web',
-          default: [],
+          default: '',
+        }),
+        tagline: field({
+          type: 'string',
+          title: 'Tagline',
+          icon: 'i-mdi-web',
+          default: '',
         }),
       },
     }),
