@@ -20,6 +20,13 @@ export default defineNuxtSchema({
     seo: group({
       title: 'SEO',
       description: 'SEO configuration',
+      icon: 'i-ph-palette-fill',
+      fields: {
+        primary: field({
+          type: 'string',
+          title: 'TEST',
+        }),
+      },
     }),
   },
 })
