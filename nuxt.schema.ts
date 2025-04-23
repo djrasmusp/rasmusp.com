@@ -3,16 +3,17 @@ import { field, group } from '@nuxt/content/preview'
 export default defineNuxtSchema({
   appConfig: {
     parent: group({
-      title: 'Parent title',
-      description: 'Parent description.',
-      icon: 'i-icon-to-display',
+      title: 'UI',
+      description: 'UI configuration',
+      icon: 'i-ph-palette-fill',
       fields: {
-        leaf: field({
+        primary: field({
           type: 'string',
-          title: 'Field title',
-          description: 'Field Description',
-          icon: 'i-icon-to-display',
-          default: 'default value',
+          title: 'Primary',
+          description: 'Primary color of your UI.',
+          icon: 'i-ph-palette',
+          default: 'sky',
+          required: ['sky', 'mint', 'rose', 'amber'],
         }),
       },
     }),
