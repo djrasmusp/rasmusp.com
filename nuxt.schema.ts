@@ -104,19 +104,21 @@ export default defineNuxtSchema({
       description: 'SEO configuration.',
       icon: 'i-ph-app-window',
       fields: {
-        siteName: field({
-          type: 'string',
-          title: 'Site Name',
-          description:
-            'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
-          icon: 'i-mdi-web',
-          default: '',
-        }),
-        tagline: field({
-          type: 'string',
-          title: 'Tagline',
-          icon: 'i-mdi-web',
-          default: '',
+        global: group({
+          siteName: field({
+            type: 'string',
+            title: 'Site Name',
+            description:
+              'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
+            icon: 'i-mdi-web',
+            default: '',
+          }),
+          tagline: field({
+            type: 'string',
+            title: 'Tagline',
+            icon: 'i-mdi-web',
+            default: '',
+          }),
         }),
       },
     }),
