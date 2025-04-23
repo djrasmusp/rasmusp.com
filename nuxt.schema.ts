@@ -17,5 +17,9 @@ export default defineNuxtSchema({
         }),
       },
     }),
+    seo: group({
+      title: 'SEO',
+      description: 'SEO configuration',
+    }),
   },
 })
