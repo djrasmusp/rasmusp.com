@@ -26,7 +26,10 @@ const { data } = await useAsyncData('skills', () => {
         :key="category.id"
         class="border-t border-b border-dashed border-indigo-100 p-4"
       >
-        <BaseH3>{{ category.title }}</BaseH3>
+        <BaseH3
+          >{{ category.title }}
+          <span class="text-indigo-800 font-bold">*</span></BaseH3
+        >
         <ol class="flex flex-col space-y-2">
           <li
             v-for="(item, index) in category.items.sort()"
@@ -39,8 +42,7 @@ const { data } = await useAsyncData('skills', () => {
       </div>
     </div>
     <p class="text-[0.6rem] font-thin text-right block col-span-full">
-      <span class="text-indigo-800 font-bold">*</span> Skils are sorted
-      alphabetically.
+      <span class="text-indigo-800 font-bold">*</span> Sorted alphabetically.
     </p>
   </div>
 </template>
