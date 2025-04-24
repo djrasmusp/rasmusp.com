@@ -48,10 +48,10 @@ function copyCode() {
 
 <template>
   <div
-    class="max-w-xl rounded-sm bg-indigo-50/10 px-4 pb-4 mx-auto border border-indigo-100 border-dashed shadow-xl shadow-gray-100"
+    class="max-w-xl rounded-sm bg-indigo-50/10 px-4 mx-auto border border-indigo-100 border-dashed shadow-xl shadow-gray-100"
   >
     <div
-      class="-mx-4 px-4 items-center justify-between flex mb-4 text-xs py-4 bg-indigo-50/30 border-b border-indigo-100 border-dashed"
+      class="-mx-4 px-4 items-center justify-between flex text-xs py-2 bg-indigo-50/30 border-b border-indigo-100 border-dashed"
     >
       <span class="text-indigo-500/90 italic">{{ filename }}</span>
       <button
@@ -72,7 +72,7 @@ function copyCode() {
     </div>
 
     <pre
-      class="text-xs overflow-x-scroll"
+      class="text-xs overflow-x-scroll -mb-4"
       :class="$props.class"
     >
       <slot />
