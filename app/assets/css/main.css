@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-display: "Roboto Mono", sans-serif;
-    --font-sans: "Roboto Mono", sans-serif;
+    --font-display: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-sans: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }

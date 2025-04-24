@@ -2,20 +2,20 @@
 defineProps({
   title: {
     type: String,
-    default: 'Experience'
+    default: 'Experience',
   },
   description: {
     type: String,
-  }
+  },
 })
-const { data} = await useAsyncData('experience', () => {
+const { data } = await useAsyncData('experience', () => {
   return queryCollection('experience').order('startDate', 'DESC').all()
 })
 
-function getYear(date: Date | null | undefined){
-  if(!date) return 'Present';
+function getYear(date: Date | null | undefined) {
+  if (!date) return 'Present'
 
-  return new Date(date).getFullYear();
+  return new Date(date).getFullYear()
 }
 </script>
 
@@ -24,7 +24,12 @@ function getYear(date: Date | null | undefined){
     <BaseH2>{{ title }}</BaseH2>
     <BaseDescription><slot mdc-unwrap="p" /></BaseDescription>
     <ExperienceList>
-    <ExperienceListItem v-for="item in data" class="before:content-['﹂_']" :item />
+      <ExperienceListItem
+        v-for="(item, index) in data"
+        :key="index"
+        class="before:content-['﹂_']"
+        :item
+      />
     </ExperienceList>
-</div>
+  </div>
 </template>
