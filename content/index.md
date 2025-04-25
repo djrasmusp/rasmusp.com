@@ -1,9 +1,12 @@
 ---
-title: Rasmus
+title: Worlds best
 description: The best in the world
+seo:
+  title: SEO Title
+  description: safasfas asf asfasfasfasfdas
+navigation:
+  title: Home
 ---
-
-# Rasmus
 
 ::skills
 ---
@@ -43,3 +46,5 @@ function getYear(date: Date | null | undefined) {
 }
 </script>
 ```
+
+adfasdf
