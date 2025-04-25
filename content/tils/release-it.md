@@ -2,8 +2,8 @@
 title: Release it! 🚀
 ---
 
-# Release It page
+# Release it
 
 Automating versioning and changelogging.
 
-\[Release It - Github]\(https\://github.com/release-it/release-it)
+[Release It - Github](https\://github.com/release-it/release-it)

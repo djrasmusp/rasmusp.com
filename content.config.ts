@@ -23,14 +23,13 @@ const experience = defineCollection({
 
 const tils = defineCollection({
   type: 'page',
-  source: 'tils/*',
+  source: 'tils/*.md',
   schema: z.object({
     title: z.string(),
     date: z.date(),
     tags: z.array(z.string()),
     description: z.string().optional(),
     draft: z.boolean().optional(),
-    rawbody: z.string(),
   }),
 })
 
