@@ -30,6 +30,7 @@ const tils = defineCollection({
     tags: z.array(z.string()),
     description: z.string().optional(),
     draft: z.boolean().optional(),
+    rawbody: z.string(),
   }),
 })
 
