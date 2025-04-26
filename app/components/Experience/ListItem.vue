@@ -35,12 +35,12 @@ function getYear(date: Date | null | undefined) {
       </span>
       <span
         v-if="item?.company"
-        class="text-sm font-normal md:text-md"
+        class="text-xs font-normal md:text-md"
       >
         {{ item.company }}
         <span
           v-if="item?.location"
-          class="text-xs font-thin"
+          class="text-2xs md:text-xs font-thin"
         >
           {{ item.location }}
         </span>

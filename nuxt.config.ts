@@ -31,7 +31,11 @@ export default defineNuxtConfig({
   site: {
     name: 'Rasmus P',
   },
-  devtools: { enabled: false },
+  ogImage: {
+    fonts: ['Geist+Mono:400', 'Geist+Mono:700'],
+    googleFontMirror: true,
+  },
+  devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
   },

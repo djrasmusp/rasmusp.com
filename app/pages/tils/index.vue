@@ -3,6 +3,9 @@
 
 const route = useRoute()
 const pageNumber = Number(route.params.page || 1)
+const {
+  tils: { numOfArticles },
+} = useAppConfig()
 
 const { data: page } = await useAsyncData(`page-${route.path}`, () => {
   return queryCollection('content').path(route.path).first()
@@ -10,16 +13,13 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
 
 const { data: tils } = await useAsyncData(`tils-page-${pageNumber}`, () => {
   return queryCollection('tils')
-    .limit(5)
-    .skip((pageNumber - 1) * 5)
+    .limit(numOfArticles)
+    .skip((pageNumber - 1) * numOfArticles)
     .all()
 })
 
-defineOgImageComponent('NuxtSeo', {
-  title: 'Worlds best',
-  description: 'The best in the world',
-  theme: '#615fff',
-  colorMode: 'light',
+defineOgImageComponent('TILS', {
+  title: page.value?.title,
 })
 
 useHead(page.value?.head || {}) // <-- Nuxt Schema.org
@@ -29,12 +29,13 @@ useSeoMeta(page.value?.seo || {})
 <template>
   <template v-if="page">
     <ContentRenderer :value="page" />
-    <div class="flex flex-col gap-y-8">
+    <div class="flex flex-col gap-y-8 my-4">
       <TILSCard
         v-for="item in tils"
         :key="item.id"
         :item
       />
     </div>
+    <BasePagenation class="my-4" />
   </template>
 </template>

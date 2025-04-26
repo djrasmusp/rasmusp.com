@@ -1,11 +1,10 @@
 ---
 title: Today I learned
-description: The best in the world
 seo:
   title: Today I learned
-  description: safasfas asf asfasfasfasfdas
 navigation:
   title: TILs
 ---
 
-## Today I learned
+# Today I learned
+A growing collection of insights and ideas from my daily learning adventures.

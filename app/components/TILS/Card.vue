@@ -14,12 +14,12 @@ defineProps<Props>()
 
 <template>
   <NuxtLink :to="item.path">
-    <article class="p-4 border border-dashed border-slate-200">
-      <div class="flex items-start justify-between">
+    <article class="px-4 pt-4 border border-dashed border-slate-200">
+      <div class="flex flex-col md:flex-row items-start justify-between">
         <BaseH2>{{ item.title }}</BaseH2>
         <ol
           v-if="item.tags"
-          class="flex gap-x-2 text-xs font-medium justify-end"
+          class="flex gap-x-2 text-xs font-medium content-end md:justify-end self-end md:self-auto order-first md:order-last mb-2 md:mb-auto"
         >
           <li
             v-for="tag in item.tags?.sort()"

@@ -4,6 +4,12 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('tils').path(route.path).first()
 })
+
+defineOgImageComponent('TILS', {
+  title: page.value?.title,
+  description: page.value?.description,
+  tags: page.value?.tags,
+})
 </script>
 
 <template>

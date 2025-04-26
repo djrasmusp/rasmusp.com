@@ -12,11 +12,9 @@ if (!page.value) {
   })
 }
 
-defineOgImageComponent('NuxtSeo', {
-  title: 'Worlds best',
-  description: 'The best in the world',
-  theme: '#615fff',
-  colorMode: 'light',
+defineOgImageComponent('TILS', {
+  title: page.value?.title,
+  description: page.value?.description,
 })
 
 useHead(page.value?.head || {}) // <-- Nuxt Schema.org

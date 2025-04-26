@@ -1,19 +1,18 @@
 ---
-title: Worlds best
-description: The best in the world
+title: Rasmus P
+description: Fullstack Developer
 seo:
   title: SEO Title
-  description: safasfas asf asfasfasfasfdas
 navigation:
   title: About
 ---
 
 ::skills
-Throughout my career I have worked with: 
+Throughout my professional adventure, I've gained experience with:
 ::
 
 ::experience{title="Experience"}
-Lorem **ipsum dolor** amet, consectetur adipiscing elit. `Maecenas` a [`iaculis`](/tils) nisi, sit amet congue nisi. Etiam dui eros, laoreet nec gravida et, suscipit sed massa.
+Throughout my journey, I’ve had the opportunity to grow and contribute in various roles across different workplaces — each chapter shaping the professional I am today.
 ::
 
 ```vue [~/components/file.vue]{12}
