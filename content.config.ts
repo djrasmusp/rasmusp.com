@@ -1,4 +1,5 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { asSeoCollection } from '@nuxtjs/seo/content'
 const skills = defineCollection({
   type: 'data',
   source: 'skills/*.yml',
@@ -21,29 +22,29 @@ const experience = defineCollection({
   }),
 })
 
-const tils = defineCollection({
-  type: 'page',
-  source: 'tils/*.md',
-  schema: z.object({
-    title: z.string(),
-    date: z.date(),
-    tags: z.array(z.string()),
-    description: z.string().optional(),
-    draft: z.boolean().optional(),
-  }),
-})
+const tils = defineCollection(
+  asSeoCollection({
+    type: 'page',
+    source: 'tils/*.md',
+    schema: z.object({
+      title: z.string(),
+      date: z.date(),
+      tags: z.array(z.string()),
+      description: z.string().optional(),
+      draft: z.boolean().optional(),
+    }),
+  })
+)
 
-const content = defineCollection({
-  type: 'page',
-  source: {
-    include: '**',
-    exclude: ['data/**', 'pages/**', 'skills/**', 'experience/**', 'tils/**'],
-  },
-  schema: z.object({
-    date: z.date(),
-    rawbody: z.string(),
-  }),
-})
+const content = defineCollection(
+  asSeoCollection({
+    type: 'page',
+    source: {
+      include: '**',
+      exclude: ['data/**', 'pages/**', 'skills/**', 'experience/**', 'tils/**'],
+    },
+  })
+)
 
 const collections = {
   content,

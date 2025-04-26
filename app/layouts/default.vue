@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+/* eslint-disable vue/no-multiple-template-root */
+</script>
 <template>
-  <div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <slot />
-    </div>
-  </div>
+  <AppHeader>
+    <AppNavigation />
+  </AppHeader>
+  <main>
+    <slot />
+  </main>
 </template>

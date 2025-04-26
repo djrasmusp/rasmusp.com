@@ -1,14 +1,14 @@
 export default defineAppConfig({
   parent: {
-    primary: "rose"
+    primary: 'rose',
   },
 
   footer: {
-    colorMode: ""
+    colorMode: '',
   },
 
   seo: {
-    siteName: "Rasmus P",
-    tagline: "Fullstack developer with a love for UX"
-  }
+    siteName: 'Rasmus P',
+    tagline: 'Fullstack developer with a love for UX',
+  },
 })

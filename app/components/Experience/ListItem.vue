@@ -19,26 +19,31 @@ function getYear(date: Date | null | undefined) {
 </script>
 
 <template>
-  <li
-    class="relative inline-flex items-center font-light pl-2 gap-x-2 before:inline-block before:text-md before:h-4 before:font-bold before:text-indigo-200 text-sm"
-  >
-    <span class="basis-28 md:basis-32 font-light shrink-0 text-xs md:text-sm"
-      >{{ getYear(item.startDate) }} - {{ getYear(item.endDate) }}</span
+  <li class="relative inline-flex items-center gap-x-2 pl-2 group">
+    <span
+      class="h-4 text-muted group-first:text-primary font-bold group-first:font-black"
+      aria-hidden="true"
     >
+      ﹂
+    </span>
+    <span class="shrink-0 basis-28 text-xs font-base md:basis-40 md:text-sm">
+      {{ getYear(item.startDate) }} — {{ getYear(item.endDate) }}
+    </span>
     <div class="flex flex-wrap items-end">
-      <span class="font-bold basis-full text-xs md:text-sm md:basis-auto">
+      <span class="basis-full text-xs font-bold text-default-dark md:text-base">
         {{ item?.title }}
       </span>
       <span
         v-if="item?.company"
-        class="md:before:content-[',_'] text-xs font-normal md:text-md"
-        >{{ item.company }}</span
+        class="text-sm font-normal md:text-md"
       >
-      <span
-        v-if="item?.location"
-        class="text-[0.66rem] sm:text-md font-light pl-1 md:pl-2"
-      >
-        {{ item.location }}
+        {{ item.company }}
+        <span
+          v-if="item?.location"
+          class="text-xs font-thin"
+        >
+          {{ item.location }}
+        </span>
       </span>
     </div>
   </li>

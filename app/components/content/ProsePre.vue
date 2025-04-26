@@ -48,15 +48,15 @@ function copyCode() {
 
 <template>
   <div
-    class="max-w-xl rounded-sm bg-indigo-50/10 px-4 mx-auto border border-indigo-100 border-dashed shadow-xl shadow-gray-100"
+    class="mx-auto my-8 max-w-xl rounded-sm border border-dashed border-indigo-100 bg-indigo-50/10 px-4"
   >
     <div
-      class="-mx-4 px-4 items-center justify-between flex text-xs py-2 bg-indigo-50/30 border-b border-indigo-100 border-dashed"
+      class="-mx-4 flex items-center justify-between border-b border-dashed border-indigo-100 bg-indigo-50/30 px-4 py-2 text-xs"
     >
-      <span class="text-indigo-500/90 italic">{{ filename }}</span>
+      <span class="italic text-primary">{{ filename }}</span>
       <button
         v-if="code"
-        class="font-bold bg-indigo-100/50 active:bg-indigo-200/60 hover:bg-indigo-100/80 rounded-sm p-2 text-xs transition"
+        class="rounded-sm bg-indigo-100/50 p-2 text-xs font-bold transition hover:bg-indigo-100/80 active:bg-indigo-200/60"
         :aria-label="copyState ? 'Code copied' : 'Copy code'"
         :aria-pressed="copyState"
         :class="{ 'bg-indigo-100/80': copyState }"
@@ -72,26 +72,10 @@ function copyCode() {
     </div>
 
     <pre
-      class="text-xs overflow-x-scroll -mb-4"
+      class="-mb-4 overflow-x-scroll text-xs"
       :class="$props.class"
     >
       <slot />
     </pre>
   </div>
 </template>
-
-<style>
-pre code .line {
-  display: block;
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

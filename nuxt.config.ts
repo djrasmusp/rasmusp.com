@@ -3,15 +3,14 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  modules: ['@nuxt/fonts', '@nuxt/content', '@nuxt/icon', '@nuxt/eslint'],
+  modules: [
+    '@nuxt/fonts',
+    '@nuxt/content',
+    '@nuxt/icon',
+    '@nuxt/eslint',
+    '@nuxtjs/seo',
+  ],
   css: ['~/assets/css/main.css'],
-  fonts: {
-    families: [{ name: 'Roboto Mono', provider: 'google' }],
-    defaults: {
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
-    provider: 'google',
-  },
   icon: {
     mode: 'svg',
     serverBundle: 'local',
@@ -28,6 +27,9 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  site: {
+    name: 'Rasmus P',
   },
   devtools: { enabled: false },
   future: {

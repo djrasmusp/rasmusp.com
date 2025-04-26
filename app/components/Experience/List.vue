@@ -1,5 +1,5 @@
 <template>
-  <ol class="list-none space-y-4 flex flex-col">
+  <ol class="flex list-none flex-col space-y-4">
     <slot />
   </ol>
 </template>

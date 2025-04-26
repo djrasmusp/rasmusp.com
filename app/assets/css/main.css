@@ -1,7 +1,46 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../../../GeistMono.woff2');
+    font-display: swap;
+    font-weight: 100 900;
+    font-style: normal italic;
+}
+
 @theme {
-    --font-display: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --font-sans: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-display: "Geist Mono", "Geist Mono fallback", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-sans: "Geist Mono", "Geist Mono fallback", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-mono: "Geist Mono", "Geist Mono fallback", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    --color-muted: var(--color-indigo-200);
+    --color-primary: var(--color-indigo-500);
+    --color-default: var(--color-slate-700);
+    --color-default-dark: var(--color-slate-900);
+
+    --color-border: var(--color-indigo-100);
+
+    --text-2xs: 0.625rem;
+}
+
+@layer components {
+    /** ProsePre **/
+    pre code .line {
+        display: block;
+    }
+
+    pre code .line.highlight {
+        background: var(--color-indigo-50) !important;
+    }
+
+    /** Transistion **/
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.3s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
+    }
 }

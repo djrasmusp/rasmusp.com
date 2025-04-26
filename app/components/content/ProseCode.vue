@@ -1,9 +1,9 @@
 <template>
-  <template>
-    <span
-      class="text-indigo-500/90 bg-indigo-50/30 rounded-sm font-normal px-1"
-    >
+  <span
+    class="before:absolute relative before:-inset-1 before:my-1 before:block inline-block before:bg-indigo-50 before:rounded-xs before:-mx-0.5"
+  >
+    <span class="relative rounded-sm font-normal text-primary before">
       <slot />
     </span>
-  </template>
+  </span>
 </template>
