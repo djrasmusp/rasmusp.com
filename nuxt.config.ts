@@ -5,10 +5,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   modules: [
     '@nuxt/fonts',
-    '@nuxt/content',
     '@nuxt/icon',
     '@nuxt/eslint',
     '@nuxtjs/seo',
+    '@nuxt/content',
   ],
   css: ['~/assets/css/main.css'],
   icon: {

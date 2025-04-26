@@ -31,7 +31,7 @@ const tils = defineCollection(
       date: z.date(),
       tags: z.array(z.string()),
       description: z.string().optional(),
-      draft: z.boolean().optional(),
+      published: z.boolean().optional(),
     }),
   })
 )
