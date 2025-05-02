@@ -14,7 +14,7 @@ defineOgImageComponent('TILS', {
 
 <template>
   <template v-if="page">
-    <ContentRenderer :value="page" />
+    <ContentRenderer :value="page.body" />
   </template>
   <template v-else> NO FOUND </template>
 </template>

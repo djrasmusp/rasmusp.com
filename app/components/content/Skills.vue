@@ -15,7 +15,7 @@ const { data } = await useAsyncData('skills', () => {
 </script>
 
 <template>
-  <div class="mx-auto my-8">
+  <div class="mx-auto my-16">
     <BaseH2>{{ title }}</BaseH2>
     <BaseDescription><slot mdc-unwrap="p" /></BaseDescription>
     <SkillsWrapper>

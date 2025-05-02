@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.4.0",
-    "@nuxt/fonts": "^0.11.1",
-    "@nuxt/icon": "^1.11.0",
+    "@nuxt/fonts": "^0.11.2",
+    "@nuxt/icon": "^1.12.0",
     "@nuxtjs/fontaine": "^0.5.0",
     "@nuxtjs/seo": "^3.0.3",
-    "@tailwindcss/vite": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.5",
     "clsx": "^2.1.1",
-    "nuxt": "^3.16.2",
+    "nuxt": "^3.17.1",
     "reka-ui": "^2.2.0",
-    "tailwindcss": "^4.1.4",
+    "tailwindcss": "^4.1.5",
     "vue": "latest"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier-vue": "^5.0.0",
-    "eslint-plugin-vue": "^10.0.0",
+    "eslint-plugin-vue": "^10.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-tailwindcss": "^0.6.11"

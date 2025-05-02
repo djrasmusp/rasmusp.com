@@ -29,7 +29,7 @@ useSeoMeta(page.value?.seo || {})
 <template>
   <template v-if="page">
     <ContentRenderer :value="page" />
-    <div class="flex flex-col gap-y-8 my-4">
+    <div class="flex flex-col gap-y-8 my-16">
       <TILSCard
         v-for="item in tils"
         :key="item.id"

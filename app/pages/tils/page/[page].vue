@@ -32,18 +32,13 @@ useSeoMeta(page.value?.seo || {})
 
 <template>
   <template v-if="page">
-    <ContentRenderer :value="page" />
-    <BasePagenation
-      v-if="currentPage !== 1"
-      class="my-4"
-    />
-    <div class="flex flex-col gap-y-8 my-4">
+    <ContentRenderer :value="page.body" />
+    <TILSList>
       <TILSCard
         v-for="item in tils"
         :key="item.id"
         :item
       />
-    </div>
-    <BasePagenation class="my-4" />
+    </TILSList>
   </template>
 </template>

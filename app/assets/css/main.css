@@ -15,8 +15,8 @@
 
     --color-muted: var(--color-indigo-200);
     --color-primary: var(--color-indigo-500);
-    --color-default: var(--color-slate-700);
-    --color-default-dark: var(--color-slate-900);
+    --color-default: var(--color-neutral-700);
+    --color-default-dark: var(--color-neutral-900);
 
     --color-border: var(--color-indigo-100);
 

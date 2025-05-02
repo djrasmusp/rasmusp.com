@@ -29,11 +29,11 @@ withDefaults(
           {{ tag }}
         </li>
       </ol>
-      <h1 class="text-left font-black text-[80px] text-slate-900">
+      <h1 class="text-left font-black text-[80px] text-neutral-900">
         {{ title }}
       </h1>
       <p
-        class="max-w-[80%] text-[28px] leading-relaxed font-normal line-clamp-3 text-slate-700"
+        class="max-w-[80%] text-[28px] leading-relaxed font-normal line-clamp-3 text-neutral-700"
       >
         {{ description }}
       </p>

@@ -35,7 +35,7 @@ const isExternal = computed(() => startsWithHttp(props.href))
     class="group"
   >
     <span
-      class="text-primary border-b-2 border-transparent hover:border-primary transition duration-300"
+      class="text-primary border-b-2 border-transparent group-hover:border-primary transition duration-300"
     >
       <slot />
     </span>

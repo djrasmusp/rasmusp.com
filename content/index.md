@@ -6,35 +6,15 @@ seo:
 navigation:
   title: About
 ---
+# Rasmus P
+Fullstack Developer with a passion for creating beautiful, intuitive, and accessible experiences.
+
 
 ::skills
 Throughout my professional adventure, I've gained experience with:
 ::
 
-::experience{title="Experience"}
+::experience{title="Work experience"}
 Throughout my journey, I’ve had the opportunity to grow and contribute in various roles across different workplaces — each chapter shaping the professional I am today.
 ::
 
-```vue [~/components/file.vue]{12}
-<script setup lang="ts">
-interface Props {
-  item: {
-    title: string
-    company?: string
-    location?: string
-    startDate: Date
-    endDate?: Date
-  }
-}
-
-defineProps<Props>()
-
-function getYear(date: Date | null | undefined) {
-  if (!date) return 'Present'
-
-  return new Date(date).getFullYear()
-}
-</script>
-```
-
-adfasdf

@@ -14,7 +14,7 @@ const { data } = await useAsyncData('experience', () => {
 </script>
 
 <template>
-  <div class="my-8">
+  <div class="my-16">
     <BaseH2>{{ title }}</BaseH2>
     <BaseDescription><slot mdc-unwrap="p" /></BaseDescription>
     <ExperienceList>
@@ -30,7 +30,7 @@ const { data } = await useAsyncData('experience', () => {
       See more on Linkedin
       <span
         aria-hidden="true"
-        class="font-bold transition duration-300 group-hover:text-primary text-muted ml-0.5"
+        class="font-bold transition duration-500 group-hover:text-primary text-muted ml-0.5"
         >↗</span
       >
     </p>

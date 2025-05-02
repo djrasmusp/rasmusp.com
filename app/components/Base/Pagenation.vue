@@ -12,6 +12,7 @@ import { useAsyncData } from '#app'
 const route = useRoute()
 const appConfig = useAppConfig()
 const currentPage = Number(route.params.page || 1)
+const itemPerPage = appConfig.tils?.numOfArticles ?? 10
 
 const { data: total } = await useAsyncData('totalOfTILs', () => {
   return queryCollection('tils').count()
@@ -27,9 +28,10 @@ function handleNavigation(value: number) {
 
 <template>
   <PaginationRoot
+    v-if="total > itemPerPage"
     :total="total"
     :sibling-count="1"
-    :items-per-page="appConfig.tils?.numOfArticles ?? 10"
+    :items-per-page="itemPerPage"
     show-edges
     :default-page="currentPage"
     @update:page="handleNavigation"
@@ -39,7 +41,7 @@ function handleNavigation(value: number) {
       class="flex gap-x-4 text-sm justify-between"
     >
       <PaginationPrev
-        class="disabled:text-slate-400 not-disabled:cursor-pointer h-4 min-w-4"
+        class="disabled:text-neutral-400 not-disabled:cursor-pointer h-4 min-w-4"
         ><span class="font-black">‹</span> Prev</PaginationPrev
       >
       <div class="md:inline-flex gap-x-4 hidden">
@@ -72,7 +74,7 @@ function handleNavigation(value: number) {
         </span>
       </div>
       <PaginationNext
-        class="disabled:text-slate-200 not-disabled:cursor-pointer h-4 min-w-4"
+        class="disabled:text-neutral-200 not-disabled:cursor-pointer h-4 min-w-4"
         >Next <span class="font-black">›</span></PaginationNext
       >
     </PaginationList>

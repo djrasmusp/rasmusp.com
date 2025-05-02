@@ -2,6 +2,43 @@ import { field, group } from '@nuxt/content/preview'
 
 export default defineNuxtSchema({
   appConfig: {
+    general: group({
+      title: 'General',
+      description: 'General configuration.',
+      icon: 'i-mdi-cog-outline',
+      fields: {
+        email: field({
+          type: 'string',
+          title: 'Email',
+          icon: 'i-mdi-at',
+          default: '',
+        }),
+        github: field({
+          type: 'string',
+          title: 'Github handle',
+          icon: 'i-mdi-github',
+          default: '',
+        }),
+        linkedin: field({
+          type: 'string',
+          title: 'Linkedin handle',
+          icon: 'i-mdi-linkedin',
+          default: '',
+        }),
+        twitter: field({
+          type: 'string',
+          title: 'Twitter handle',
+          icon: 'i-mdi-twitter',
+          default: '',
+        }),
+        bluesky: field({
+          type: 'string',
+          title: 'Bluesky handle',
+          icon: 'i-mdi-butterfly-outline',
+          default: '',
+        }),
+      },
+    }),
     seo: group({
       title: 'SEO',
       description: 'SEO configuration.',
@@ -116,13 +153,6 @@ export default defineNuxtSchema({
           icon: 'i-mdi-circle-edit-outline',
           default: '',
         }),
-        colorMode: field({
-          type: 'boolean',
-          title: 'Color Mode',
-          description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-mdi-moon-waning-crescent',
-          default: false,
-        }),
         links: field({
           type: 'array',
           title: 'Links',
@@ -179,8 +209,19 @@ export default defineNuxtSchema({
 
 declare module '@nuxt/schema' {
   interface CustomAppConfig {
-    ui: {
-      icons: object
+    general: {
+      email: string
+      github: string
+      linkedin: string
+      twitter: string
+      bluesky: string
+    }
+    seo: {
+      siteName: string
+      tagline: string
+    }
+    tils: {
+      numOfArticles: number
     }
   }
 }

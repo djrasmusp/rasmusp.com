@@ -19,7 +19,7 @@ const { data } = await useAsyncData('navigation', () => {
           class="flex items-center font-medium tracking-widest group"
         >
           <span
-            class="mr-2 h-4 font-bold transition duration-300 text-muted group-hover:text-primary"
+            class="mr-2 h-4 font-bold transition duration-500 text-muted group-hover:text-primary"
             aria-hidden="true"
             >*</span
           >{{ item.title }}</NuxtLink
