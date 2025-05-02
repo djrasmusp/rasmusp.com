@@ -11,4 +11,12 @@ export default defineAppConfig({
   tils: {
     numOfArticles: 5,
   },
+
+  general: {
+    email: 'hello@rasmusp.dom',
+    github: 'djrasmusp',
+    linkedin: 'djrasmusp',
+    twitter: 'djrasmusp',
+    bluesky: 'rasmusp.com',
+  },
 })
