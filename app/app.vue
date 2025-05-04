@@ -1,9 +1,7 @@
 <template>
-  <Html>
+  <Html class="scroll-smooth">
     <Head />
-    <Body
-      class="mx-auto max-w-4xl bg-indigo-50/10 px-4 py-8 text-default sm:px-6 lg:px-8"
-    >
+    <Body>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>

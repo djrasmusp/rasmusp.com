@@ -13,6 +13,7 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
 
 const { data: tils } = await useAsyncData(`tils-page-${pageNumber}`, () => {
   return queryCollection('tils')
+    .where('published', '=', true)
     .limit(numOfArticles)
     .skip((pageNumber - 1) * numOfArticles)
     .all()

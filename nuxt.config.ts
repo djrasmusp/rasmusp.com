@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     fonts: ['Geist+Mono:400', 'Geist+Mono:700'],
     googleFontMirror: true,
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
   },

@@ -14,10 +14,18 @@ const { data: page } = await useAsyncData('page-/tils', () => {
 
 const { data: tils } = await useAsyncData(`tils-page-${currentPage}`, () => {
   return queryCollection('tils')
+    .where('published', '=', true)
     .limit(numOfArticles)
     .skip((currentPage - 1) * numOfArticles)
     .all()
 })
+
+if (!page.value || tils.value?.length === 0) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Not Found',
+  })
+}
 
 defineOgImageComponent('NuxtSeo', {
   title: 'Worlds best',

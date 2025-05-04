@@ -4,7 +4,7 @@ interface Props {
     title: string
     description: string
     date: string
-    tags?: string[]
+    tags?: string[] | null
     path: string
   }
 }
@@ -29,9 +29,8 @@ defineProps<Props>()
         <li
           v-for="tag in item.tags?.sort()"
           :key="tag"
-          class="bg-muted/30 rounded-sm tracking-wider px-1 py-0.5 text-primary"
         >
-          {{ tag }}
+          <BaseTag>{{ tag }}</BaseTag>
         </li>
       </ol>
     </div>

@@ -25,5 +25,4 @@ useSeoMeta(page.value?.seo || {})
   <template v-if="page">
     <ContentRenderer :value="page" />
   </template>
-  <template v-else> NO FOUND</template>
 </template>

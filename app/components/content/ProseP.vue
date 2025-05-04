@@ -1,3 +1,3 @@
 <template>
-  <p class="max-w-[75ch] text-pretty not-first-of-type:mt-6"><slot /></p>
+  <p class="max-w-[75ch] text-pretty text-base"><slot /></p>
 </template>

@@ -15,7 +15,7 @@ const { data } = await useAsyncData('skills', () => {
 </script>
 
 <template>
-  <div class="mx-auto my-16">
+  <section class="mx-auto my-16">
     <BaseH2>{{ title }}</BaseH2>
     <BaseDescription><slot mdc-unwrap="p" /></BaseDescription>
     <SkillsWrapper>
@@ -40,5 +40,5 @@ const { data } = await useAsyncData('skills', () => {
     <p class="col-span-full mt-2 block font-light text-2xs md:text-right">
       <span class="font-bold text-indigo-500">*</span> Sorted alphabetically.
     </p>
-  </div>
+  </section>
 </template>
