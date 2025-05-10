@@ -14,7 +14,7 @@ defineProps<Props>()
 
 <template>
   <article
-    class="p-4 border border-dashed border-neutral-200 hover:bg-muted/5 transition duration-300"
+    class="p-4 border border-dashed border-neutral-200 bg-linear-to-b to-transparent from-transparent hover:to-neutral-50/10 hover:from-primary/5 hover:25% transition duration-500"
   >
     <div class="flex flex-col md:flex-row items-start justify-between">
       <NuxtLink
@@ -34,7 +34,9 @@ defineProps<Props>()
         </li>
       </ol>
     </div>
-    <BaseDescription>{{ item.description }}</BaseDescription>
+    <NuxtLink :to="item.path">
+      <BaseDescription>{{ item.description }}</BaseDescription>
+    </NuxtLink>
     <NuxtLink
       :to="item.path"
       :title="`Read ${item.title}`"

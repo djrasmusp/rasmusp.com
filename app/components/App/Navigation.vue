@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const route = useRoute()
-
 const { data } = await useAsyncData('navigation', () => {
   return queryCollectionNavigation('content')
 })
@@ -16,20 +14,16 @@ function toggleMenu() {
   <nav>
     <ul
       v-if="data"
-      class="justify-end gap-x-8 hidden md:flex"
+      class="justify-end gap-x-12 hidden md:flex list-outside"
     >
       <li
         v-for="item in data"
         :key="item.path"
+        class="marker:text-muted has-[a:hover]:marker:text-primary marker:transition pl-2 marker:duration-500"
       >
         <NuxtLink
           :to="item.path"
-          class="flex items-center font-medium tracking-widest group"
-        >
-          <span
-            class="mr-2 h-4 font-bold transition duration-500 text-muted group-hover:text-primary"
-            aria-hidden="true"
-            >*</span
+          class="flex items-center font-medium tracking-widest"
           >{{ item.title }}</NuxtLink
         >
       </li>
@@ -62,3 +56,9 @@ function toggleMenu() {
     </transition>
   </nav>
 </template>
+<style scoped>
+li::marker {
+  font-family: var(--font-symbol);
+  content: '* ';
+}
+</style>

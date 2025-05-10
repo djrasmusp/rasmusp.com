@@ -38,7 +38,7 @@ const { data } = await useAsyncData('skills', () => {
       </SkillsColumn>
     </SkillsWrapper>
     <p class="col-span-full mt-2 block font-light text-2xs md:text-right">
-      <span class="font-bold text-indigo-500">*</span> Sorted alphabetically.
+      <span class="font-bold text-primary">*</span> Sorted alphabetically.
     </p>
   </section>
 </template>

@@ -27,17 +27,19 @@ const { general } = useAppConfig()
         :item
       />
     </ExperienceList>
-    <NuxtLink
-      target="_blank"
-      :to="`https://linkedin.com/in/${general.linkedin}`"
-      class="col-span-full mt-2 block font-light text-2xs hover:text-primary text-right group transition duration-300"
-    >
-      See more on Linkedin
-      <span
-        aria-hidden="true"
-        class="font-bold transition duration-500 group-hover:text-primary text-muted ml-0.5"
-        >↗</span
+    <div class="col-span-full flex mt-4 md:mt-2 md:flex-col-reverse">
+      <NuxtLink
+        target="_blank"
+        :to="`https://linkedin.com/in/${general.linkedin}`"
+        class="font-light text-2xs hover:text-primary text-right group transition duration-300"
       >
-    </NuxtLink>
+        See more on Linkedin
+        <span
+          aria-hidden="true"
+          class="font-bold transition duration-500 group-hover:text-primary text-muted ml-0.5"
+          >↗</span
+        >
+      </NuxtLink>
+    </div>
   </section>
 </template>

@@ -21,9 +21,13 @@ const generate = computed(
       v-if="generate"
       :href="`#${props.id}`"
     >
-      fasdf
       <slot />
     </a>
     <slot v-else />
   </h1>
 </template>
+<style scoped>
+h1 {
+  view-transition-name: selected-header;
+}
+</style>

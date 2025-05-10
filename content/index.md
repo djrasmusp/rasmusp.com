@@ -2,6 +2,7 @@
 title:
 description: Fullstack Developer
 seo:
+  title: RASMUS P
 navigation:
   title: About
 ---

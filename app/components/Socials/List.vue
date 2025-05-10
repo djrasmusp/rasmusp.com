@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { general } = useAppConfig()
+
+function onClick() {}
 </script>
 
 <template>
@@ -25,6 +27,14 @@ const { general } = useAppConfig()
         :handle="general.twitter"
         provider="x"
       />
+      <NuxtLink
+        to="http://localhost:3000/email"
+        :external="true"
+        target="_blank"
+        class="text-sm md:text-xs text-default hover:text-primary transition duration-300"
+      >
+        send email
+      </NuxtLink>
     </ul>
   </nav>
 </template>

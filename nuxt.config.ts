@@ -42,4 +42,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  experimental: {
+    viewTransition: true,
+  },
 })

@@ -15,7 +15,7 @@ const generate = computed(
 <template>
   <h3
     :id="props.id"
-    class="mb-2 text-lg font-bold scroll-mt-8 tracking-wider text-default-dark text-pretty"
+    class="mb-2 text-lg font-bold scroll-mt-8 text-default-dark text-pretty"
   >
     <a
       v-if="generate"

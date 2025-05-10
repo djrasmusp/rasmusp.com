@@ -10,7 +10,7 @@ const slug = computed(() => {
 <template>
   <NuxtLink
     :to="`/tils/category/${slug.toLowerCase()}`"
-    class="bg-muted/30 rounded-sm tracking-wider px-1 py-0.5 text-primary"
+    class="bg-muted/10 rounded-sm tracking-wider px-1 py-0.5 text-primary"
   >
     <slot />
   </NuxtLink>

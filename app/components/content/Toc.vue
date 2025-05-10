@@ -1,10 +1,8 @@
 <script setup lang="ts">
-const route = useRoute()
-const { data } = await useAsyncData(route.path, () => {
-  return queryCollection('tils').path(route.path).first()
-})
+import { useNuxtData } from '#app'
 
-console.log(test)
+const route = useRoute()
+const { data } = useNuxtData(route.path)
 </script>
 
 <template>
@@ -18,11 +16,12 @@ console.log(test)
     </div>
     <ol
       v-if="data?.body.toc?.links"
-      class="mt-4 list-decimal list-inside flex flex-col gap-y-4"
+      class="mt-4 list-inside list-decimal flex flex-col gap-y-4 marker:text-default-dark"
     >
       <li
         v-for="link in data?.body?.toc?.links"
         :key="link.id"
+        class="text-default-dark"
       >
         <NuxtLink :to="`#${link.id}`">
           {{ link.text }}
@@ -34,6 +33,7 @@ console.log(test)
           <li
             v-for="child in link.children"
             :key="child.id"
+            class="text-default"
           >
             <NuxtLink :to="`#${child.id}`">
               {{ child.text }}

@@ -1,10 +1,5 @@
 <template>
-  <li class="relative flex items-center gap-x-2 text-sm font-normal">
-    <span
-      class="h-3 text-muted"
-      aria-hidden="true"
-      >*</span
-    >
+  <li class="text-sm font-normal marker:text-muted">
     <slot />
   </li>
 </template>

@@ -18,7 +18,7 @@ defineProps<{
         >{{ provider }}</span
       >
       <span
-        class="text-primary md:text-neutral-300 group-hover:text-primary transition duration-500"
+        class="text-primary md:text-muted-neutral group-hover:text-primary transition duration-500"
         >/{{ handle }}</span
       >
     </NuxtLink>

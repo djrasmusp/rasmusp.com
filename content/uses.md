@@ -7,8 +7,7 @@ navigation:
 ---
 
 # Uses
-A look under the hood — here's the gear and software I use to slay code, design interfaces, and occasionally break production (with style).
-
+Here’s what’s in my digital toolbox — the gear I use to write code, craft interfaces and and stay productive.
 ## Editor + Terminal
 - My main battlestation is **WebStorm** — unbeatable for TypeScript, Vue, and React work. For backend projects I switch over to **Rider** (C#/.NET) or **PHPStorm** (for those dusty old PHP projects).
 - I'm currently experimenting with **Cursor** — AI-assisted coding is wild, and I'm curious where it'll fit into my dev flow.

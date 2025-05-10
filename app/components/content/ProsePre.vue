@@ -51,11 +51,11 @@ function copyCode() {
     class="mx-auto my-8 max-w-xl rounded-sm border border-dashed border-indigo-100 bg-indigo-50/10 px-4"
   >
     <div
-      class="-mx-4 flex items-center justify-between border-b border-dashed border-indigo-100 bg-indigo-50/30 px-4 py-2 text-xs"
+      class="-mx-4 flex items-center justify-between border-b border-dashed border-indigo-100 bg-indigo-50/30 px-4 py-2 text-sm font-medium"
     >
       <span class="italic text-primary">{{ filename }}</span>
       <button
-        v-if="code"
+        v-if="code && language !== 'structure'"
         class="rounded-sm bg-indigo-100/50 p-2 text-xs font-bold transition hover:bg-indigo-100/80 active:bg-indigo-200/60"
         :aria-label="copyState ? 'Code copied' : 'Copy code'"
         :aria-pressed="copyState"
@@ -72,7 +72,7 @@ function copyCode() {
     </div>
 
     <pre
-      class="-mb-4 overflow-x-scroll text-xs"
+      class="-mb-4 overflow-x-scroll text-sm"
       :class="$props.class"
     >
       <slot />
